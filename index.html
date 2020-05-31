@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<form class="contactForm" action="#" method="post">
+    <h1 class="formName">Contact form</h1>
+    <p class="descriptionText">Please fill in your information and we'll be sending you order.</p>
+
+    <div class="divWrap">
+        <label class="inputLabel">Your name</label>
+        <span class="inputDiv">
+            <input class="inputItem" type="text"
+                   placeholder="first name"
+                   required
+                   autofocus
+                   pattern="[A-Z][a-z]{1,63}">
+            <input class="inputItem" type="text"
+                   placeholder="last name"
+                   required
+                   pattern="[A-Z][a-z]{1,63}">
+        </span>
+    </div>
+
+    <div class="divWrap">
+        <label for="emailInput" class="inputLabel">Your email</label>
+        <span class="inputDiv">
+            <input class="inputItem" id="emailInput"
+                   type="email"
+                   required
+                   placeholder="your_mail@mail.com">
+        </span>
+    </div>
+
+    <div class="divWrap">
+        <label class="inputLabel">Phone *</label>
+        <span class="inputDiv phone">
+            <input class="inputItem" type="tel" placeholder="000" pattern="\d{3}">
+            <input class="inputItem" type="tel" placeholder="000" pattern="\d{3}">
+            <input class="inputItem" type="tel" placeholder="0000" pattern="\d{4}">
+        </span>
+    </div>
+
+    <div class="divWrap">
+        <label for="massageSubjectInput" class="inputLabel">Message subject *</label>
+        <span class="inputDiv">
+            <select class="selectItem" lang="ru" name="city" id="massageSubjectInput">
+                <option value="" selected>Other</option>
+                <option value="first">First</option>
+                <option value="second">Second</option>
+                <option value="third">Third</option>
+                <option value="fourth">Fourth</option>
+                <option value="fifth">Fifth</option>
+                <option value="sixth">Sixth</option>
+            </select>
+        </span>
+    </div>
+
+    <div class="divWrap">
+        <label for="messageInput" class="inputLabel inputTextarea">Message *</label>
+        <span class="inputDiv">
+            <textarea class="textareaItem" id="messageInput"
+                      name="aboutYourself"
+                      cols="30"
+                      rows="9">
+            </textarea>
+        </span>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <button type="submit" class="submitButton">submit form</button>
+</form>
+
+</body>
+</html>

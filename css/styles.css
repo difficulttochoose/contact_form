@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background-image: url("../sea2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.formName {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.descriptionText {
+    font-size: small;
+    padding: 25px 0;
+}
+
+.contactForm {
+    box-shadow: 0 0 11px 6px rgba(0, 0, 0, 1);
+    margin: 50px auto;
+    width: 75vw;
+    max-width: 800px;
+    flex-direction: column;
+    padding: 40px 35px;
+    font-family: sans-serif;
+}
+
+.divWrap {
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.inputDiv, .divWrap, .contactForm {
+    display: flex;
+}
+
+.divWrap, .contactForm {
+    justify-content: space-between;
+}
+
+.submitButton {
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-top: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid white;
+    font-weight: bolder;
+    padding: 0.8em 0;
+    color: white;
+}
+
+.inputDiv, .submitButton {
+    width: 80%;
+}
+
+.inputDiv > *, .submitButton, .contactForm {
+    font-size: smaller;
+}
+
+.inputDiv > * {
+    width: 100%;
+}
+
+.inputItem + .inputItem {
+    margin-left: 20px;
+}
+
+.inputItem::placeholder {
+    color: #d9d9d9;
+}
+
+.inputItem, .selectItem {
+    padding: 0.7em 1em;
+}
+
+.selectItem {
+    background: white;
+}
+
+.inputItem, .selectItem, .textareaItem, .selectItem option {
+    margin: 6px 0;
+    color: black;
+}
+
+.phone > :first-child, .phone > :nth-child(2) {
+    flex-basis: 75%;
+}
+
+hr {
+    box-shadow: inset 0 0 8px 6px rgba(0, 0, 0, 1);
+}
+
+.inputTextarea {
+    align-self: baseline;
+    margin-top: 1.3em;
+}
+
+/*
+Extra small <576px
+Small       ≥576px
+Medium      ≥768px
+Large       ≥992px
+Extra large ≥1200px
+*/
+
+@media (max-width: 852px) {
+    .contactForm {
+        margin: auto;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .submitButton, .inputDiv, .contactForm {
+        width: 100%;
+    }
+
+    .inputDiv {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .inputItem + .inputItem {
+        margin-left: 0;
+    }
+
+    .contactForm {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .phone > :first-child, .phone > :nth-child(2) {
+        flex-basis: 100%;
+    }
+}

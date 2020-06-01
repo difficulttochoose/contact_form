@@ -10,7 +10,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .formName {
@@ -26,25 +27,28 @@ body {
 
 .contactForm {
     box-shadow: 0 0 11px 6px rgba(0, 0, 0, 1);
-    margin: 50px auto;
-    width: 75vw;
-    max-width: 800px;
+    width: 100%;
+    max-width: 830px;
     flex-direction: column;
-    padding: 40px 35px;
+    padding: 40px 35px 40px 20px;
     font-family: sans-serif;
 }
 
-.divWrap {
-    align-items: center;
-    flex-wrap: wrap;
+.formName, .descriptionText, .inputLabel > label, hr {
+    margin-left: 20px;
 }
 
-.inputDiv, .divWrap, .contactForm {
+.inputDiv, .divWrap, .contactForm, .inputItem, .phone > *, body {
     display: flex;
 }
 
-.divWrap, .contactForm {
+.inputDiv, .divWrap, .contactForm {
     justify-content: space-between;
+}
+
+.inputDiv, .divWrap {
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .submitButton {
@@ -58,10 +62,16 @@ body {
     font-weight: bolder;
     padding: 0.8em 0;
     color: white;
+    min-width: 77.5%;
 }
 
-.inputDiv, .submitButton {
+.inputDiv {
+    --widthInputDiv: 80%;
     width: 80%;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .inputDiv > *, .submitButton, .contactForm {
@@ -70,10 +80,6 @@ body {
 
 .inputDiv > * {
     width: 100%;
-}
-
-.inputItem + .inputItem {
-    margin-left: 20px;
 }
 
 .inputItem::placeholder {
@@ -94,7 +100,13 @@ body {
 }
 
 .phone > :first-child, .phone > :nth-child(2) {
-    flex-basis: 75%;
+    min-width: 176px;
+    width: 176px;
+}
+
+.phone > :last-child {
+    width: 215px;
+    min-width: 200px;
 }
 
 hr {
@@ -106,42 +118,22 @@ hr {
     margin-top: 1.3em;
 }
 
-/*
-Extra small <576px
-Small       ≥576px
-Medium      ≥768px
-Large       ≥992px
-Extra large ≥1200px
-*/
-
-@media (max-width: 852px) {
-    .contactForm {
-        margin: auto;
-        padding: 10px;
-        width: 100%;
-    }
+.inputLabel {
+    max-width: 130px;
+    flex-basis: 100%;
 }
 
-@media (max-width: 575px) {
-    .submitButton, .inputDiv, .contactForm {
-        width: 100%;
-    }
+.userName > .inputItem {
+    min-width: 200px;
+    width: 294px;
+}
 
-    .inputDiv {
-        display: flex;
-        flex-wrap: wrap;
-    }
+.inputItem, .selectItem, .textareaItem {
+    border: transparent;
+    border-left: 20px solid transparent;
+    background-clip: padding-box;
+}
 
-    .inputItem + .inputItem {
-        margin-left: 0;
-    }
-
-    .contactForm {
-        margin: 0;
-        padding: 10px;
-    }
-
-    .phone > :first-child, .phone > :nth-child(2) {
-        flex-basis: 100%;
-    }
+.userName > .inputItem, .phone > * {
+    flex-grow: 10;
 }

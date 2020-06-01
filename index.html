@@ -15,8 +15,10 @@
     <p class="descriptionText">Please fill in your information and we'll be sending you order.</p>
 
     <div class="divWrap">
-        <label class="inputLabel">Your name</label>
-        <span class="inputDiv">
+        <span class="inputLabel">
+            <label>Your name</label>
+        </span>
+        <span class="inputDiv userName">
             <input class="inputItem" type="text"
                    placeholder="first name"
                    required
@@ -30,7 +32,9 @@
     </div>
 
     <div class="divWrap">
-        <label for="emailInput" class="inputLabel">Your email</label>
+        <span class="inputLabel">
+            <label for="emailInput">Your email</label>
+        </span>
         <span class="inputDiv">
             <input class="inputItem" id="emailInput"
                    type="email"
@@ -40,7 +44,9 @@
     </div>
 
     <div class="divWrap">
-        <label class="inputLabel">Phone *</label>
+        <span class="inputLabel">
+            <label>Phone *</label>
+        </span>
         <span class="inputDiv phone">
             <input class="inputItem" type="tel" placeholder="000" pattern="\d{3}">
             <input class="inputItem" type="tel" placeholder="000" pattern="\d{3}">
@@ -49,9 +55,11 @@
     </div>
 
     <div class="divWrap">
-        <label for="massageSubjectInput" class="inputLabel">Message subject *</label>
+        <span class="inputLabel">
+            <label for="massageSubjectInput">Message subject *</label>
+        </span>
         <span class="inputDiv">
-            <select class="selectItem" lang="ru" name="city" id="massageSubjectInput">
+            <select class="selectItem" id="massageSubjectInput">
                 <option value="" selected>Other</option>
                 <option value="first">First</option>
                 <option value="second">Second</option>
@@ -64,7 +72,9 @@
     </div>
 
     <div class="divWrap">
-        <label for="messageInput" class="inputLabel inputTextarea">Message *</label>
+        <span class="inputLabel inputTextarea">
+            <label for="messageInput">Message *</label>
+        </span>
         <span class="inputDiv">
             <textarea class="textareaItem" id="messageInput"
                       name="aboutYourself"
